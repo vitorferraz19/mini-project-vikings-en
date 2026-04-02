@@ -34,7 +34,7 @@ class Viking(Soldier):
     def battleCry(self):   # 0 arguments
         return "Odin Owns You All!"               # message returned in this case
 
-    def receiveDamage(self, damage):    # 1 argument: damage
+    def receiveDamage(self, damage):    # 1 argument: damage  ;  case of polymorphism - same method, but with a distinct behaviour compared to the soldier
         self.health -= damage                # removes the received damage from the health property
         if self.health > 0:          # assuming the Viking is alive
             return f"{self.name} has received {damage} points of damage"    # returning this message on points of damage
